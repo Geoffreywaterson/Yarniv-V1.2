@@ -17,32 +17,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="MU6-oU-cLY">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896.00000000000011"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="QM0-72-I3v">
                                 <rect key="frame" x="0.0" y="444" width="414" height="398"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Player One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuV-G5-jxk">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuV-G5-jxk">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10a-er-SeU" userLabel="DealButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="37.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10a-er-SeU" userLabel="DealButton">
+                                        <rect key="frame" x="0.0" y="72.5" width="414" height="31"/>
                                         <state key="normal" image="dealbutton"/>
                                         <connections>
                                             <action selector="DealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UfX-bQ-Clb"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Bmn-Tf-xdZ">
-                                        <rect key="frame" x="0.0" y="37.5" width="414" height="340"/>
+                                        <rect key="frame" x="0.0" y="155.5" width="414" height="170"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="pJW-EB-uu7" userLabel="LeftCardImage">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="340"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="170"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="h1i-fe-XgZ" userLabel="RightCardImage">
-                                                <rect key="frame" x="207" y="0.0" width="207" height="340"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="170"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="390"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Rr-yZ-3sa">
-                                    <size key="itemSize" width="115" height="161"/>
+                                    <size key="itemSize" width="115" height="461"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -85,26 +85,29 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="N2x-eq-KaB" userLabel="Front ImageView">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="5ts-Jk-Z8Q"/>
-                                                        <constraint firstAttribute="height" constant="170" id="NYy-hm-LM0"/>
+                                                        <constraint firstAttribute="height" constant="170" id="AId-0Z-fRx"/>
+                                                        <constraint firstAttribute="width" constant="120" id="NpK-X0-bbN"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="LWy-03-vqE" userLabel="Back Image View">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="170" id="arR-Zd-Vtc"/>
-                                                        <constraint firstAttribute="width" constant="120" id="rGI-pn-Hw6"/>
+                                                        <constraint firstAttribute="height" constant="170" id="MRR-gn-dLB"/>
+                                                        <constraint firstAttribute="width" constant="120" id="tyk-AR-pJK"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="N2x-eq-KaB" firstAttribute="top" secondItem="ITw-Dq-fxP" secondAttribute="top" id="Dqi-9c-cbE"/>
+                                                <constraint firstAttribute="bottom" secondItem="LWy-03-vqE" secondAttribute="bottom" id="E8x-7O-359"/>
                                                 <constraint firstItem="LWy-03-vqE" firstAttribute="top" secondItem="ITw-Dq-fxP" secondAttribute="top" id="Xj4-go-c1W"/>
+                                                <constraint firstAttribute="bottom" secondItem="N2x-eq-KaB" secondAttribute="bottom" id="Xya-XP-mxB"/>
+                                                <constraint firstAttribute="trailing" secondItem="N2x-eq-KaB" secondAttribute="trailing" id="gcZ-br-tFy"/>
+                                                <constraint firstAttribute="trailing" secondItem="LWy-03-vqE" secondAttribute="trailing" id="iTK-et-3JW"/>
                                                 <constraint firstItem="N2x-eq-KaB" firstAttribute="leading" secondItem="ITw-Dq-fxP" secondAttribute="leading" id="qAB-qt-Q1f"/>
                                                 <constraint firstItem="LWy-03-vqE" firstAttribute="leading" secondItem="ITw-Dq-fxP" secondAttribute="leading" id="yXr-1T-l8M"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="120" height="170"/>
                                         <connections>
                                             <outlet property="backImageView" destination="LWy-03-vqE" id="a0V-e3-8ab"/>
                                             <outlet property="frontImageView" destination="N2x-eq-KaB" id="x77-UH-w7B"/>

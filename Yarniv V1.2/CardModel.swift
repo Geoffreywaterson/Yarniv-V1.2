@@ -17,7 +17,7 @@ class CardModel {
         // declare an array to store generated numbers
         var generatedCardsArray = [Card]()
         // randomly generate card numbers
-        for _ in 1...4 {
+        for _ in 1...16 {
             // Get a random Number
             let randomNumber = arc4random_uniform(13) + 1
             
