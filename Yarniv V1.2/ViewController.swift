@@ -8,12 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    var model = CardModel()
+    var cardArray = [Card]()
+
+    
     @IBOutlet weak var LeftCardImage: UIImageView!
     @IBOutlet weak var RightCardImage: UIImageView!
     @IBOutlet weak var ScoreLabel: UILabel!
       
+
+    @IBOutlet weak var collectionView: UICollectionView!
     
     
     override func viewDidLoad() {
@@ -43,12 +49,59 @@ class ViewController: UIViewController {
         let TotalScore = LeftScoreRandomNumber + RightScoreRandomNumber
         ScoreLabel.text = ("\(TotalScore)")
         
+        // Call the Get Cards method of the CardModel
+        cardArray = model.getCards()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.reloadData()
         
     }
-    
-    
-    
-    
-    
-}
+    // MARK: - UICollectionView Protocol Methods
+        
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            
+            return cardArray.count
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            
+            // Get an CardCollectionViewCell object
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
+            
+            // Get the card that the collection view is trying to display
+            let card = cardArray[indexPath.row]
+            
+            // Set that card for the cell
+            cell.setCard(card)
+            
+            return cell
+        }
 
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            
+            // Get the cell that the user selected
+            let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+            
+            // Get the card that the user selected
+            let card = cardArray[indexPath.row]
+            
+            if card.isFlipped == false {
+                
+                // Flip the card
+                cell.flip()
+                
+                // Set the status of the card
+                card.isFlipped = true
+            }
+            else {
+                // Flip the card back
+                cell.flipBack()
+                
+                // Set the status of the card
+                card.isFlipped = false
+            }
+            
+            
+        }
+    }
