@@ -66,7 +66,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KI3-dB-jFV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="390"/>
+                                <rect key="frame" x="10" y="44" width="394" height="390"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Rr-yZ-3sa">
                                     <size key="itemSize" width="115" height="461"/>
@@ -126,9 +126,9 @@
                             <constraint firstAttribute="trailing" secondItem="MU6-oU-cLY" secondAttribute="trailing" id="cn5-EW-sAd"/>
                             <constraint firstItem="QM0-72-I3v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="doS-T8-W8k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QM0-72-I3v" secondAttribute="trailing" id="nxy-gh-UjN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KI3-dB-jFV" secondAttribute="trailing" id="oxh-Op-08D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KI3-dB-jFV" secondAttribute="trailing" constant="10" id="oxh-Op-08D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QM0-72-I3v" secondAttribute="bottom" constant="20" id="rVN-LN-2TR"/>
-                            <constraint firstItem="KI3-dB-jFV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y0W-mS-y4H"/>
+                            <constraint firstItem="KI3-dB-jFV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="y0W-mS-y4H"/>
                             <constraint firstItem="MU6-oU-cLY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yxK-yf-pS6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
