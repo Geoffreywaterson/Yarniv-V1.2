@@ -16,8 +16,10 @@ class CardModel {
         
         // declare an array to store generated numbers
         var generatedCardsArray = [Card]()
+        var cardListArray = [String]()
+        
         // randomly generate card numbers
-        for _ in 1...16 {
+        for _ in 1...5 {
             // Get a random Number
             let randomNumber = arc4random_uniform(13) + 1
             
@@ -28,8 +30,12 @@ class CardModel {
             let cardOne = Card()
             cardOne.imageName = "card\(randomNumber)"
             
+            let CardOneItem = "card\(randomNumber)"
+            print(CardOneItem)
+            
             // Add the card to the Array
             generatedCardsArray.append(cardOne)
+            cardListArray.append(CardOneItem)
             
             // OPTIONAL TODO: Make sure only unique pairs (While Loop?)
             
@@ -39,7 +45,12 @@ class CardModel {
         // MAY NOT BE NEEDED: randomize the array
         
         // Return the array
+        print(cardListArray)
+        cardListArray.sort()
+        print(cardListArray)
+
         return generatedCardsArray
+                
              
         
     }
