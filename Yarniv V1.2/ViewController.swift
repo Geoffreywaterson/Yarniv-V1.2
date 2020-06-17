@@ -52,6 +52,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Call the Get Cards method of the CardModel
         cardArray = model.getCards()
         
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.reloadData()
@@ -80,28 +81,85 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             
-            // Get the cell that the user selected
             let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
             
-            // Get the card that the user selected
             let card = cardArray[indexPath.row]
+            if card.isSelected == false {
             
-            if card.isFlipped == false {
+            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 0, options: [], animations: {
+                cell.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                })
+        
+                card.isSelected = true
                 
-                // Flip the card
-                cell.flip()
+                // Add to Score
                 
-                // Set the status of the card
-                card.isFlipped = true
+                
             }
             else {
-                // Flip the card back
-                cell.flipBack()
                 
-                // Set the status of the card
-                card.isFlipped = false
+                UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 0, options: [], animations: {
+                cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+                })
+                
+                card.isSelected = false
+                
+                // Subtract from Score
+                
+                
             }
             
             
         }
+    
+ 
+     
+     
     }
+
+
+
+
+
+
+
+    /*
+ 
+    FROM WITHIN VIEWDIDLOAD
+             
+                // Get the cell that the user selected
+                let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+                
+                // Get the card that the user selected
+                let card = cardArray[indexPath.row]
+                
+                if card.isFlipped == false {
+                    
+                    // Flip the card
+                    cell.flip()
+                    
+                    // Set the status of the card
+                    card.isFlipped = true
+                }
+                else {
+                    // Flip the card back
+                    cell.flipBack()
+                    
+                    // Set the status of the card
+                    card.isFlipped = false
+                }
+    */
+
+
+/* Test Text for de-selecting cards. Didn't quite work.
+ 
+ 
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    
+        let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+    
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 0, options: [], animations: {
+            cell.transform = .identity
+        })
+    }
+*/

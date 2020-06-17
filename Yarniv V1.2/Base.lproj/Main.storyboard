@@ -66,7 +66,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KI3-dB-jFV">
-                                <rect key="frame" x="35" y="54" width="344" height="380"/>
+                                <rect key="frame" x="10" y="54" width="394" height="380"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Rr-yZ-3sa">
                                     <size key="itemSize" width="115" height="461"/>
@@ -76,21 +76,21 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="Drb-GS-9zo" customClass="CardCollectionViewCell" customModule="Yarniv_V1_2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ITw-Dq-fxP">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="N2x-eq-KaB" userLabel="Front ImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                                    <rect key="frame" x="5" y="10" width="60" height="85"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="85" id="AId-0Z-fRx"/>
                                                         <constraint firstAttribute="width" constant="60" id="NpK-X0-bbN"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="LWy-03-vqE" userLabel="Back Image View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="85"/>
+                                                    <rect key="frame" x="5" y="10" width="60" height="85"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="85" id="MRR-gn-dLB"/>
                                                         <constraint firstAttribute="width" constant="60" id="tyk-AR-pJK"/>
@@ -98,14 +98,14 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="N2x-eq-KaB" firstAttribute="top" secondItem="ITw-Dq-fxP" secondAttribute="top" id="Dqi-9c-cbE"/>
-                                                <constraint firstAttribute="bottom" secondItem="LWy-03-vqE" secondAttribute="bottom" id="E8x-7O-359"/>
-                                                <constraint firstItem="LWy-03-vqE" firstAttribute="top" secondItem="ITw-Dq-fxP" secondAttribute="top" id="Xj4-go-c1W"/>
-                                                <constraint firstAttribute="bottom" secondItem="N2x-eq-KaB" secondAttribute="bottom" id="Xya-XP-mxB"/>
-                                                <constraint firstAttribute="trailing" secondItem="N2x-eq-KaB" secondAttribute="trailing" id="gcZ-br-tFy"/>
-                                                <constraint firstAttribute="trailing" secondItem="LWy-03-vqE" secondAttribute="trailing" id="iTK-et-3JW"/>
-                                                <constraint firstItem="N2x-eq-KaB" firstAttribute="leading" secondItem="ITw-Dq-fxP" secondAttribute="leading" id="qAB-qt-Q1f"/>
-                                                <constraint firstItem="LWy-03-vqE" firstAttribute="leading" secondItem="ITw-Dq-fxP" secondAttribute="leading" id="yXr-1T-l8M"/>
+                                                <constraint firstItem="N2x-eq-KaB" firstAttribute="top" secondItem="ITw-Dq-fxP" secondAttribute="top" constant="10" id="Dqi-9c-cbE"/>
+                                                <constraint firstAttribute="bottom" secondItem="LWy-03-vqE" secondAttribute="bottom" constant="5" id="E8x-7O-359"/>
+                                                <constraint firstItem="LWy-03-vqE" firstAttribute="top" secondItem="ITw-Dq-fxP" secondAttribute="top" constant="10" id="Xj4-go-c1W"/>
+                                                <constraint firstAttribute="bottom" secondItem="N2x-eq-KaB" secondAttribute="bottom" constant="5" id="Xya-XP-mxB"/>
+                                                <constraint firstAttribute="trailing" secondItem="N2x-eq-KaB" secondAttribute="trailing" constant="5" id="gcZ-br-tFy"/>
+                                                <constraint firstAttribute="trailing" secondItem="LWy-03-vqE" secondAttribute="trailing" constant="5" id="iTK-et-3JW"/>
+                                                <constraint firstItem="N2x-eq-KaB" firstAttribute="leading" secondItem="ITw-Dq-fxP" secondAttribute="leading" constant="5" id="qAB-qt-Q1f"/>
+                                                <constraint firstItem="LWy-03-vqE" firstAttribute="leading" secondItem="ITw-Dq-fxP" secondAttribute="leading" constant="5" id="yXr-1T-l8M"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
@@ -126,9 +126,9 @@
                             <constraint firstAttribute="trailing" secondItem="MU6-oU-cLY" secondAttribute="trailing" id="cn5-EW-sAd"/>
                             <constraint firstItem="QM0-72-I3v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="doS-T8-W8k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QM0-72-I3v" secondAttribute="trailing" id="nxy-gh-UjN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KI3-dB-jFV" secondAttribute="trailing" constant="35" id="oxh-Op-08D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KI3-dB-jFV" secondAttribute="trailing" constant="10" id="oxh-Op-08D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QM0-72-I3v" secondAttribute="bottom" constant="20" id="rVN-LN-2TR"/>
-                            <constraint firstItem="KI3-dB-jFV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="y0W-mS-y4H"/>
+                            <constraint firstItem="KI3-dB-jFV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="y0W-mS-y4H"/>
                             <constraint firstItem="MU6-oU-cLY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yxK-yf-pS6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

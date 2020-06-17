@@ -23,6 +23,7 @@ class CardModel {
         print(allCards[0...4])
         var initialNumber = 0
         
+        
         // randomly generate card numbers
         for _ in 1...5 {
             // Get a random Number

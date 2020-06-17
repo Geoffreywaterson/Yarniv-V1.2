@@ -13,5 +13,8 @@ class Card {
     var imageName = ""
     var isFlipped = true
     var isMatched = false
+    var isSelected = false
+    var value = 0
+    
     
 }
