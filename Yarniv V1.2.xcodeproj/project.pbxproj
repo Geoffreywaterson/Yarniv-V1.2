@@ -16,6 +16,7 @@
 		094714962477428E00F40FAA /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094714952477428E00F40FAA /* CardModel.swift */; };
 		094714982477429A00F40FAA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094714972477429A00F40FAA /* Card.swift */; };
 		0947149E24774C9E00F40FAA /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0947149D24774C9E00F40FAA /* CardCollectionViewCell.swift */; };
+		09A395EE249C2F24007E03D0 /* PlayerOneHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A395ED249C2F24007E03D0 /* PlayerOneHand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		094714952477428E00F40FAA /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		094714972477429A00F40FAA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0947149D24774C9E00F40FAA /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		09A395ED249C2F24007E03D0 /* PlayerOneHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerOneHand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				0947147F2473671600F40FAA /* ViewController.swift */,
 				094714952477428E00F40FAA /* CardModel.swift */,
 				094714972477429A00F40FAA /* Card.swift */,
+				09A395ED249C2F24007E03D0 /* PlayerOneHand.swift */,
 				0947149D24774C9E00F40FAA /* CardCollectionViewCell.swift */,
 				094714812473671600F40FAA /* Main.storyboard */,
 				094714842473671800F40FAA /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				094714802473671600F40FAA /* ViewController.swift in Sources */,
+				09A395EE249C2F24007E03D0 /* PlayerOneHand.swift in Sources */,
 				094714962477428E00F40FAA /* CardModel.swift in Sources */,
 				094714982477429A00F40FAA /* Card.swift in Sources */,
 				0947147C2473671600F40FAA /* AppDelegate.swift in Sources */,

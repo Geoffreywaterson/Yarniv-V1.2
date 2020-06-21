@@ -12,7 +12,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     var model = CardModel()
     var cardArray = [Card]()
-
+    var TotalScore = 0
     
     @IBOutlet weak var LeftCardImage: UIImageView!
     @IBOutlet weak var RightCardImage: UIImageView!
@@ -31,50 +31,40 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func DealTapped(_ sender: Any) {
         
         print("Deal button tapped")
-        
-        // What happens to the Left Card
-        let LeftScoreRandomNumber = arc4random_uniform(13) + 1
-        print("Left Score Random Number = \(LeftScoreRandomNumber)")
-        
-        LeftCardImage.image = UIImage(named: "card\(LeftScoreRandomNumber)")
-        
-        // What happens to the Right Card
-        let RightScoreRandomNumber = arc4random_uniform(13) + 1
-        print("Right Score Random Number = \(RightScoreRandomNumber)")
-        
-        RightCardImage.image = UIImage(named: "card\(RightScoreRandomNumber)")
-        
-        
-        // What happens to the Score Label
-        let TotalScore = LeftScoreRandomNumber + RightScoreRandomNumber
+        TotalScore = 0
         ScoreLabel.text = ("\(TotalScore)")
-        
-        // Call the Get Cards method of the CardModel
-        cardArray = model.getCards()
-        
-        
+    
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.reloadData()
         
+        // Call the Get Cards method of the CardModel
+        cardArray = model.getCards()
+        print("\(cardArray[0].imageName) is in the cardArray and has a value of \(cardArray[0].value)")
+        
+        
     }
+    
+    
     // MARK: - UICollectionView Protocol Methods
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            
-            return cardArray.count
-        }
+            return cardArray.count        }
         
+    
+    
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
             // Get an CardCollectionViewCell object
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
             
+            
             // Get the card that the collection view is trying to display
             let card = cardArray[indexPath.row]
-            
+                
             // Set that card for the cell
             cell.setCard(card)
+
             
             return cell
         }
@@ -82,6 +72,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             
             let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+            
             
             let card = cardArray[indexPath.row]
             if card.isSelected == false {
@@ -94,6 +85,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 
                 // Add to Score
                 
+                TotalScore += card.value
+                ScoreLabel.text = ("\(TotalScore)")
                 
             }
             else {
@@ -104,6 +97,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 
                 card.isSelected = false
                 
+                TotalScore -= card.value
+                ScoreLabel.text = ("\(TotalScore)")
                 // Subtract from Score
                 
                 
@@ -119,6 +114,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
 
 
+
+
+                        /*
+                         For Deal button Tapped
+                        // What happens to the Left Card
+                        let LeftScoreRandomNumber = arc4random_uniform(13) + 1
+                        print("Left Score Random Number = \(LeftScoreRandomNumber)")
+
+                        LeftCardImage.image = UIImage(named: "card\(LeftScoreRandomNumber)")
+
+                        // What happens to the Right Card
+                        let RightScoreRandomNumber = arc4random_uniform(13) + 1
+                        print("Right Score Random Number = \(RightScoreRandomNumber)")
+
+                        RightCardImage.image = UIImage(named: "card\(RightScoreRandomNumber)")
+
+
+                        // What happens to the Score Label
+                        let TotalScore = LeftScoreRandomNumber + RightScoreRandomNumber
+                        ScoreLabel.text = ("\(TotalScore)")
+                        */
 
 
 
