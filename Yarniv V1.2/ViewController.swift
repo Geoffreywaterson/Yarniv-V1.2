@@ -41,6 +41,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Call the Get Cards method of the CardModel
         cardArray = model.getCards()
         print("\(cardArray[0].imageName) is in the cardArray and has a value of \(cardArray[0].value)")
+        print("\(playerOneHandArray[0].imageName) is in PlayerOneHandArray")
+        print("\(playerTwoHandArray[0].imageName) is in PlayerTwoHandArray")
+       
+        
         
         
     }
@@ -91,6 +95,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
             else {
                 
+                 
+                 
                 UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 0, options: [], animations: {
                 cell.transform = CGAffineTransform(scaleX: 1, y: 1)
                 })
@@ -101,11 +107,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 ScoreLabel.text = ("\(TotalScore)")
                 // Subtract from Score
                 
-                
             }
             
             
         }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    
+        let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+        let card = cardArray[indexPath.row]
+        
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 0, options: [], animations: {
+            cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+            card.isSelected = false
+            self.TotalScore -= card.value
+        })
+    }
     
  
      

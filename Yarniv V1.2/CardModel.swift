@@ -88,13 +88,16 @@ class CardModel {
         Card13.suit = "heart"
         allCards.append(Card13)
         
-        allCards.shuffle()
+        // allCards.shuffle()
+      
+        
         
         for _ in 1...5 {
             
             generatedCardsArray.append(allCards[initialNumber])
-            
-            initialNumber += 1
+            playerOneHandArray.append(allCards[initialNumber])
+            playerTwoHandArray.append(allCards[initialNumber + 1])
+            initialNumber += 2
             
         }
         

@@ -17,6 +17,7 @@
 		094714982477429A00F40FAA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094714972477429A00F40FAA /* Card.swift */; };
 		0947149E24774C9E00F40FAA /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0947149D24774C9E00F40FAA /* CardCollectionViewCell.swift */; };
 		09A395EE249C2F24007E03D0 /* PlayerOneHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A395ED249C2F24007E03D0 /* PlayerOneHand.swift */; };
+		09A395F024A18A62007E03D0 /* PlayerTwoHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A395EF24A18A62007E03D0 /* PlayerTwoHand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		094714972477429A00F40FAA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0947149D24774C9E00F40FAA /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		09A395ED249C2F24007E03D0 /* PlayerOneHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerOneHand.swift; sourceTree = "<group>"; };
+		09A395EF24A18A62007E03D0 /* PlayerTwoHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTwoHand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				094714952477428E00F40FAA /* CardModel.swift */,
 				094714972477429A00F40FAA /* Card.swift */,
 				09A395ED249C2F24007E03D0 /* PlayerOneHand.swift */,
+				09A395EF24A18A62007E03D0 /* PlayerTwoHand.swift */,
 				0947149D24774C9E00F40FAA /* CardCollectionViewCell.swift */,
 				094714812473671600F40FAA /* Main.storyboard */,
 				094714842473671800F40FAA /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A395F024A18A62007E03D0 /* PlayerTwoHand.swift in Sources */,
 				094714802473671600F40FAA /* ViewController.swift in Sources */,
 				09A395EE249C2F24007E03D0 /* PlayerOneHand.swift in Sources */,
 				094714962477428E00F40FAA /* CardModel.swift in Sources */,
