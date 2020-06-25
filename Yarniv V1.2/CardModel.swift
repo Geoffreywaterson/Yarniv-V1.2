@@ -88,6 +88,7 @@ class CardModel {
         Card13.suit = "heart"
         allCards.append(Card13)
         
+        print("AllCards include \(allCards[0].imageName), \(allCards[1].imageName), \(allCards[2].imageName), \(allCards[3].imageName) and \(allCards[4].imageName)")
         // allCards.shuffle()
       
         
@@ -95,16 +96,13 @@ class CardModel {
         for _ in 1...5 {
             
             generatedCardsArray.append(allCards[initialNumber])
+            generatedCardsArray.append(allCards[initialNumber + 1])
             playerOneHandArray.append(allCards[initialNumber])
             playerTwoHandArray.append(allCards[initialNumber + 1])
             initialNumber += 2
             
         }
-        
-        
         return generatedCardsArray
-                
-             
         
     }
     

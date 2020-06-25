@@ -38,11 +38,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.dataSource = self
         collectionView.reloadData()
         
+        playerOneHandArray.removeAll()
+        playerTwoHandArray.removeAll()
+        
         // Call the Get Cards method of the CardModel
         cardArray = model.getCards()
-        print("\(cardArray[0].imageName) is in the cardArray and has a value of \(cardArray[0].value)")
-        print("\(playerOneHandArray[0].imageName) is in PlayerOneHandArray")
-        print("\(playerTwoHandArray[0].imageName) is in PlayerTwoHandArray")
+        print("cardArray has the following \(cardArray[0].value),\(cardArray[1].value),\(cardArray[2].value),\(cardArray[3].value),\(cardArray[4].value)")
+        print("PlayerOne has the following \(playerOneHandArray[0].value),\(playerOneHandArray[1].value),\(playerOneHandArray[2].value),\(playerOneHandArray[3].value),\(playerOneHandArray[4].value)")
+        print("PlayerTwo has the following \(playerTwoHandArray[0].value),\(playerTwoHandArray[1].value),\(playerTwoHandArray[2].value),\(playerTwoHandArray[3].value),\(playerTwoHandArray[4].value)")
+        print(cardArray.count)
+        print(playerOneHandArray.count)
+        print(playerTwoHandArray.count)
+        
        
         
         
@@ -53,7 +60,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // MARK: - UICollectionView Protocol Methods
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return cardArray.count        }
+            return playerOneHandArray.count        }
         
     
     
@@ -64,7 +71,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             
             // Get the card that the collection view is trying to display
-            let card = cardArray[indexPath.row]
+            let card = playerOneHandArray[indexPath.row]
                 
             // Set that card for the cell
             cell.setCard(card)
@@ -78,7 +85,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
             
             
-            let card = cardArray[indexPath.row]
+            let card = playerOneHandArray[indexPath.row]
             if card.isSelected == false {
             
             UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 0, options: [], animations: {
@@ -114,7 +121,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
     
         let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
-        let card = cardArray[indexPath.row]
+        let card = playerOneHandArray[indexPath.row]
         
         UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 0, options: [], animations: {
             cell.transform = CGAffineTransform(scaleX: 1, y: 1)
